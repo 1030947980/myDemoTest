@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/common/common-util/pom.xml" />
+        <option value="$PROJECT_DIR$/server/svr-discover/pom.xml" />
+        <option value="$PROJECT_DIR$/business/order-service/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-parent-lib/pom.xml" />
+        <option value="$PROJECT_DIR$/business/user-service/pom.xml" />
+        <option value="$PROJECT_DIR$/common/common-entity/pom.xml" />
+        <option value="$PROJECT_DIR$/server/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/user-service-nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/business/order-service-nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/business/user-service-nacos/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

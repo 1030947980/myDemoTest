@@ -1,0 +1,8 @@
+# Project exclude paths
+/business/order-service/target/
+/business/order-service-nacos/target/
+/business/user-service/target/
+/business/user-service-nacos/target/
+/common/common-entity/target/
+/out/
+/server/eureka-server/target/

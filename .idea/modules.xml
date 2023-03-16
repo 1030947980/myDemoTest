@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/common/common-entity/common-entity.iml" filepath="$PROJECT_DIR$/common/common-entity/common-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common-util/common-util.iml" filepath="$PROJECT_DIR$/common/common-util/common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-parent-lib/demo-parent-lib.iml" filepath="$PROJECT_DIR$/demo-parent-lib/demo-parent-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/server/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaTest/javaTest.iml" filepath="$PROJECT_DIR$/javaTest/javaTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/myDemoTest.iml" filepath="$PROJECT_DIR$/.idea/myDemoTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business/order-service/order-service.iml" filepath="$PROJECT_DIR$/business/order-service/order-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business/order-service-nacos/order-service-nacos.iml" filepath="$PROJECT_DIR$/business/order-service-nacos/order-service-nacos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business/user-service/user-service.iml" filepath="$PROJECT_DIR$/business/user-service/user-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/business/user-service-nacos/user-service-nacos.iml" filepath="$PROJECT_DIR$/business/user-service-nacos/user-service-nacos.iml" />
+    </modules>
+  </component>
+</project>
