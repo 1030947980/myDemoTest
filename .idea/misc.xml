@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/common/feign-api" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -13,6 +17,8 @@
         <option value="$PROJECT_DIR$/user-service-nacos/pom.xml" />
         <option value="$PROJECT_DIR$/business/order-service-nacos/pom.xml" />
         <option value="$PROJECT_DIR$/business/user-service-nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/common/feign-api/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
       </list>
     </option>
   </component>

@@ -1,17 +1,20 @@
 package com.example.orderservicenacos;
 
+import com.example.feignapi.clients.UserClient;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableJpaAuditing
+@EnableFeignClients(clients = {UserClient.class})
 @EntityScan(basePackages = "com.example.entity.order")
 public class OrderServiceNacosApplication{
 

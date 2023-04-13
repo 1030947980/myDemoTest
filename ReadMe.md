@@ -1,5 +1,12 @@
 # 分布式服务
 
+# nacos环境优先级
+> [服务名称]-[环境].yaml配置文件 > [服务名称].yaml配置文件>本地配置
+
+>如：
+userservicenacos-localhost.yaml
+高于orderservicenacos.yaml
+高于本地配置
 # 1.eureka
 >spring-cloud
 

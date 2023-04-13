@@ -8,6 +8,8 @@
     <file url="file://$PROJECT_DIR$/business/user-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/common-entity/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/common-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/feign-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server/eureka-server/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
