@@ -47,6 +47,7 @@
             <groupId>io.github.openfeign</groupId>
             <artifactId>feign-httpclient</artifactId>
         </dependency>
+        <!--项目依赖-->
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>common-entity</artifactId>
@@ -55,6 +56,11 @@
         <dependency>
             <groupId>com.example</groupId>
             <artifactId>feign-api</artifactId>
+            <version>${version.myDemo}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>rabbitMq</artifactId>
             <version>${version.myDemo}</version>
         </dependency>
 

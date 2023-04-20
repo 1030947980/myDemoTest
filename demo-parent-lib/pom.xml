@@ -14,12 +14,14 @@
     <version>1.0</version>
 
     <modules>
-        <module>../business/order-service</module>
+        <module>../common/common-entity</module>
         <module>../common/common-util</module>
         <module>../common/feign-api</module>
+        <module>../common/rabbitMq</module>
+        <module>../business/order-service</module>
         <module>../business/order-service-nacos</module>
         <module>../business/user-service</module>
-        <module>../business/order-service-nacos</module>
+        <module>../business/user-service-nacos</module>
     </modules>
     <packaging>pom</packaging>
 

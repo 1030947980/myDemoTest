@@ -9,13 +9,15 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableJpaAuditing
 @EnableFeignClients(clients = {UserClient.class})
-@EntityScan(basePackages = "com.example.entity.order")
+@EntityScan(basePackages = {"com.example.entity.order"})
+@ComponentScan("com.example")
 public class OrderServiceNacosApplication{
 
     public static void main(String[] args) {
