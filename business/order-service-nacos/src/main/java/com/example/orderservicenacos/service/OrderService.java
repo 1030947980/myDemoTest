@@ -3,10 +3,9 @@ package com.example.orderservicenacos.service;
 import com.example.entity.order.Order;
 import com.example.entity.user.User;
 import com.example.feignapi.clients.UserClient;
-import com.example.orderservicenacos.dao.OrderDao;
+import com.example.orderservicenacos.dao.order.OrderDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 @Service
 public class OrderService {

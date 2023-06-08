@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class MyTest {
     public static void main(String[] args) {
         //创建线程池
-        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(
+        ThreadPoolExecutor  poolExecutor = new ThreadPoolExecutor(
                 3,
                 5,
                 1,

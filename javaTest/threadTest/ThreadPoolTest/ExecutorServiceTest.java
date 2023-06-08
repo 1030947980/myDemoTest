@@ -77,7 +77,7 @@ class newFixedThreadPool2{
 }
 class newSingleThreadExecutor{
     public static  void main(String[] args) {
-        //创建一个固定大小的线程池 默认空闲0S
+        //创建一个只有一个线程的线程池 默认空闲0S
         ExecutorService exec = Executors.newSingleThreadExecutor();
         for (int i = 0; i < 10; i++) {
             exec.submit(new MyRunnable(i));
@@ -90,7 +90,7 @@ class newSingleThreadExecutor{
 }
 class newSingleThreadExecutor2{
     public static  void main(String[] args) {
-        //创建一个固定大小的线程池 默认空闲0S
+        //创建一个只有一个线程的线程池 默认空闲0S
         ExecutorService exec = Executors.newSingleThreadExecutor(new ThreadFactory() {
             int i=0;
             @Override

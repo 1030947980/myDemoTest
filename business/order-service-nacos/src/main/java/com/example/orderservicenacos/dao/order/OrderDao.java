@@ -1,4 +1,4 @@
-package com.example.orderservice.dao;
+package com.example.orderservicenacos.dao.order;
 
 
 import com.example.entity.order.Order;

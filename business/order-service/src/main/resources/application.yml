@@ -26,6 +26,17 @@ spring:
       min-evictable-idle-time-millis: 3600000 #连接池中连接，在时间段内一直空闲，被逐出连接池的时间(1000*60*60)，以毫秒为单位
       time-between-eviction-runs-millis: 300000 #在空闲连接回收器线程运行期间休眠的时间值,以毫秒为单位，一般比minEvictableIdleTimeMillis小
 
+#mybatis
+mybatis:
+#  Mapper文件存放位置 classpath：指向的是 resources 文件夹
+  mapper-locations: classpath:com/example/orderservice/mapper/*.xml
+#  是否开启驼峰命名
+#  configuration:
+  map-underscore-to-camel-case: true
+  #  包 - 别名，
+  type-aliases-package: com.example.orderservice.pojo
+
+
 logging:
   level:
     com.example.orderservice: debug
