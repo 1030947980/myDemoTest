@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * Created by Bing on 2023/4/17.
+ * 广播配置
  */
 @Configuration
 public class FanoutConfig {

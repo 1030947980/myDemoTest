@@ -8,7 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common-util" />
         <module name="user-service-nacos" />
+        <module name="es-service" />
         <module name="order-service-nacos" />
+        <module name="common-resultful" />
         <module name="user-service" />
         <module name="order-service" />
         <module name="eureka-server" />
@@ -19,16 +21,29 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="common-entity" target="1.8" />
+      <module name="common-util" target="1.8" />
+      <module name="demo-parent-lib" target="1.8" />
+      <module name="es-service" target="1.8" />
+      <module name="eureka-server" target="1.8" />
       <module name="eurekaServer" target="1.8" />
+      <module name="gateway" target="1.8" />
       <module name="nacos-server" target="1.8" />
+      <module name="order-service" target="1.8" />
+      <module name="order-service-nacos" target="1.8" />
+      <module name="rabbitMq" target="1.8" />
       <module name="svr-configuration" target="1.8" />
+      <module name="user-service" target="1.8" />
+      <module name="user-service-nacos" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="common-entity" options="-parameters" />
+      <module name="common-resultful" options="-parameters" />
       <module name="common-util" options="-parameters" />
       <module name="demo-parent-lib" options="-parameters" />
+      <module name="es-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="eurekaServer" options="-parameters" />
       <module name="feign-api" options="-parameters" />

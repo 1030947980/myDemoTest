@@ -8,6 +8,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalTime;
+import java.util.Map;
 
 /**
  * Created by Bing on 2023/4/14.

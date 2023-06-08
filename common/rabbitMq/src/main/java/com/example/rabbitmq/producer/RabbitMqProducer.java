@@ -4,6 +4,9 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Bing on 2023/4/14.
  */
@@ -44,10 +47,22 @@ public class RabbitMqProducer {
         rabbitTemplate.convertAndSend(exchangeName, "", message);
     }
 
+    /**
+     * 路由
+     * @param exchangeName
+     * @param routerKey
+     * @param message
+     */
     public void testSendDirectExchange(String exchangeName,String routerKey,String message) {
         rabbitTemplate.convertAndSend(exchangeName, routerKey, message);
     }
 
+    /**
+     * 话题
+     * @param exchangeName
+     * @param key
+     * @param message
+     */
     public void testSendTopicExchange(String exchangeName,String key,String message) {
         rabbitTemplate.convertAndSend(exchangeName, key, message);
     }

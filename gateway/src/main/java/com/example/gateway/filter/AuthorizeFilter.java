@@ -12,7 +12,6 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
@@ -30,7 +29,7 @@ public class AuthorizeFilter implements GlobalFilter {
         MultiValueMap<String, String> params = request.getQueryParams();
 
         //防止SQL注入过滤器
-        if(doSqlFilter(params)){
+        if (doSqlFilter(params)) {
             exchange.getResponse().setStatusCode(HttpStatus.BAD_REQUEST);
             return exchange.getResponse().setComplete();
         }
@@ -44,7 +43,7 @@ public class AuthorizeFilter implements GlobalFilter {
         String authorization = params.getFirst("authorization");
         //判断是否等于admin
         //放行or拦截
-        if ("admin".equals(authorization)){
+        if ("admin".equals(authorization)) {
             return chain.filter(exchange);
         }
 
@@ -52,12 +51,13 @@ public class AuthorizeFilter implements GlobalFilter {
         return exchange.getResponse().setComplete();
     }
 
-    public boolean doSqlFilter(MultiValueMap<String, String> params){
+    public boolean doSqlFilter(MultiValueMap<String, String> params) {
         String sql = "";
         for (String key : params.keySet()) {
             List<String> values = params.get(key);
 
-            for (String value : Objects.requireNonNull(values)) {
+            List<String> list = Objects.requireNonNull(values);
+            for (String value : list) {
                 sql = sql + value;
             }
             if (sqlValidate(sql)) {
@@ -68,12 +68,12 @@ public class AuthorizeFilter implements GlobalFilter {
     }
 
     private static boolean sqlValidate(String str) {
-        if (StringUtils.isNoneBlank(str)){
+        if (StringUtils.isNoneBlank(str)) {
             str = str.toLowerCase();//统一转为小写,比较简单的单词加入右边空格，避免单词中包含字段
             String badStr = "and |exec |execute |insert |select |delete |update |drop |chr |mid |master |truncate |" +
                     "declare | sitename |net user|xp_cmdshell|or |exec |execute |create |" +
                     "table |from |grant |use |group_concat|column_name|" +
-                    "information_schema.columns|table_schema|union |where |select |update |order |by |like |" ;//过滤掉的sql关键字，可以手动添加
+                    "information_schema.columns|table_schema|union |where |select |update |order |by |like |";//过滤掉的sql关键字，可以手动添加
             String[] badStrs = badStr.split("\\|");
             for (int i = 0; i < badStrs.length; i++) {
                 if (str.indexOf(badStrs[i]) >= 0) {
@@ -81,7 +81,7 @@ public class AuthorizeFilter implements GlobalFilter {
                 }
             }
             return false;
-        }else {
+        } else {
             return true;
         }
     }

@@ -21,6 +21,8 @@
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/common/rabbit-mq/pom.xml" />
         <option value="$PROJECT_DIR$/common/rabbitMq/pom.xml" />
+        <option value="$PROJECT_DIR$/common/common-resultful/pom.xml" />
+        <option value="$PROJECT_DIR$/common/es-service/pom.xml" />
       </list>
     </option>
   </component>

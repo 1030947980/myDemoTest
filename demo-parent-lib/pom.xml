@@ -16,6 +16,8 @@
     <modules>
         <module>../common/common-entity</module>
         <module>../common/common-util</module>
+        <module>../common/common-resultful</module>
+        <module>../common/es-service</module>
         <module>../common/feign-api</module>
         <module>../common/rabbitMq</module>
         <module>../business/order-service</module>
@@ -32,8 +34,9 @@
         <version.java>1.8</version.java>
         <version.spring-cloud>Hoxton.SR10</version.spring-cloud>
         <version.mysql>5.1.47</version.mysql>
-        <version.mybatis>2.1.1</version.mybatis>
-        <verion.fastjson>1.2.83</verion.fastjson>
+        <version.mybatis>2.2.1</version.mybatis>
+        <version.fastjson>1.2.83</version.fastjson>
+        <elasticsearch.version>7.12.1</elasticsearch.version>
     </properties>
 
     <dependencyManagement>
@@ -69,7 +72,7 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>${verion.fastjson}</version>
+                <version>${version.fastjson}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

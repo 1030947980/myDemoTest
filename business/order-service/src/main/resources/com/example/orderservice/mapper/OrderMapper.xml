@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间，可实现mapper.xml的隔离
+全限定名
+-->
+<mapper namespace="com.example.orderservice.mapper.OrderMapper">
+
+<!--    抽出sql片段，方便复用,但是有局限性-->
+<!--    <sql id="orderAll">id,user_id userId,name,price,num </sql>-->
+
+<!--    <select id="selectOrderById" resultType="Order">-->
+<!--        select-->
+<!--        <include refid="orderAll"/>-->
+<!--        from tb_order where id = #{id}-->
+<!--    </select>-->
+
+
+        <select id="selectOrderById" resultMap="orderResultMap">
+            select *
+            from tb_order where id = #{id}
+        </select>
+
+        <select id="selectOrderALL" resultMap="orderResultMap">
+            select *
+            from tb_order
+            <if test="page != null">
+                limit #{page},#{size}
+            </if>
+        </select>
+
+<!--    多条件查询用where标签，可以解决and问题-->
+    <select id="selectOrderByCondition" resultMap="orderResultMap">
+        select *
+        from tb_order
+        <where>
+            <if test="userId !=null">
+                and user_id=#{userId}
+            </if>
+            <if test="name !=null and name !=''">
+                and name=#{name}
+            </if>
+        </where>
+    </select>
+
+<!--         useGeneratedKeys="true" keyProperty="id" 可以获取主键返回-->
+        <insert id="insertOrder" useGeneratedKeys="true" keyProperty="id" >
+            insert into tb_order (user_id,name,price,num)
+            values (#{userId},#{name},#{price},#{num})
+        </insert>
+
+<!--        修改用set标签-->
+    <update id="updateOrderByCondition">
+        update tb_order
+        <set>
+            <if test="userId !=null">
+                user_id=#{userId},
+            </if>
+            <if test="name !=null and name !=''">
+                name=#{name},
+            </if>
+            <if test="price !=null">
+                price=#{price},
+            </if>
+            <if test="num !=null">
+                num=#{num},
+            </if>
+        </set>
+        where id=#{id}
+    </update>
+
+    <delete id="deleteById">
+        delete from tb_order where id=#{id}
+    </delete>
+
+<!--    mybatis会将数组封装为map集合 key为array 值为数组
+        也可以利用@Param 改表map集合的key-->
+    <delete id="deleteByIds">
+        delete from tb_order where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+        <resultMap id="orderResultMap" type="Order">
+<!--           id标签 主键字段的映射3-->
+            <id column="id" property="id"/>
+<!--           result标签 一般字段的映射-->
+            <result column="user_id" property="userId"/>
+        </resultMap>
+
+</mapper>

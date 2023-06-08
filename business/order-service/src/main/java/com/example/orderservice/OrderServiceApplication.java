@@ -2,17 +2,22 @@ package com.example.orderservice;
 
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.web.client.RestTemplate;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 @SpringBootApplication
-@EnableJpaAuditing
-@EntityScan(basePackages = "com.example.entity.order")
+@MapperScan("com.example.orderservice.mapper")
 public class OrderServiceApplication{
 
     public static void main(String[] args) {
